@@ -1,0 +1,7 @@
+#!/bin/bash
+export PORT='3000'
+# Modificare ROOT_URL con l'URL del server di produzione
+export ROOT_URL='http://example.com'
+# Modificare databaseName con il nome del database mongo
+# che si desidera utilizzare.
+export MONGO_URL='mongodb://127.0.0.1:27017/databaseName'
