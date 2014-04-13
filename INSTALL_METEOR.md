@@ -66,7 +66,7 @@ Copiare all'interno della cartella `~/bundle/` il file
 `env_vars` di questa repository, che definisce alcune
 variabili d'ambiente necessarie a meteor:
 
-	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/env_vars ~/bundle/env_vars
+	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/env_vars -O ~/bundle/env_vars
 
 Apportare le modifiche necessarie al file (all'interno del
 file ci sono indicazioni su cosa cambiare).
@@ -90,13 +90,13 @@ meteor con i comandi `service meteor start` e `service
 meteor stop`, oltre che fare avviare il server meteor dopo
 il boot.
 
-	sudo wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/meteor.conf /etc/init/meteor.conf
+	sudo wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/meteor.conf -O /etc/init/meteor.conf
 
 Copiare nella cartella `/usr/bin/` il file
 `meteor_server.sh` (uno script usato dal servizio "meteor"
 di upstart), e marcarlo come eseguibile:
 
-	sudo wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/meteor_server.sh /usr/bin/meteor_server.sh
+	sudo wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/meteor_server.sh -O /usr/bin/meteor_server.sh
 	sudo chmod +x /usr/bin/meteor_server.sh
 
 A questo punto è possibile avviare il server con:

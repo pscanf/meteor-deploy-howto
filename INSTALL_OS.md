@@ -68,7 +68,7 @@ Impostare i permessi appropriati per la cartella:
 
 Scaricare il file `sshd_config` da questa repository, e sostituire con esso il file `/etc/ssh/sshd_config`:
 
-	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/sshd_config /etc/ssh/sshd_config
+	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/sshd_config -O /etc/ssh/sshd_config
 
 Riavviare il servizio ssh:
 
@@ -78,11 +78,11 @@ Riavviare il servizio ssh:
 
 Scaricare il file `nginx.conf` da questa repository, e sostituire con esso il file `/etc/nginx/nginx.conf`:
 
-	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/nginx.conf /etc/nginx/nginx.conf
+	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/nginx.conf -O /etc/nginx/nginx.conf
 
 Scaricare il file `app.conf` da questa repository, e metterlo nella cartella `/etc/nginx/sites-enabled/`:
 
-	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/app.conf /etc/nginx/sites-enabled/app.conf
+	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/app.conf -O /etc/nginx/sites-enabled/app.conf
 
 Modificare il `/etc/nginx/sites-enabled/app.conf` inserendo i corretti parametri
 per la propria applicazione (indicazioni su cosa modificare sono presenti all'interno dei file).
@@ -93,12 +93,12 @@ Se viene usato SSL, sostituire nella cartella `/etc/nginx/cert` i certificati se
 
 Scaricare il file `iptables.rules` da questa repository, e spostarlo nella cartella `/etc/`
 
-	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/iptables.rules /etc/iptables.rules
+	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/iptables.rules -O /etc/iptables.rules
 
 Scaricare il file `load_iptables_rules.sh` da questa repository, e spostarlo nella cartella `/etc/network/if-pre-up.d`
 
-	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/load_iptables_rules.sh /etc/network/if-pre-up.d/load_iptables_rules.sh
+	wget https://raw.githubusercontent.com/pscanf/meteor-deploy-howto/master/load_iptables_rules -O /etc/network/if-pre-up.d/load_iptables_rules
 
 Marcare il file come eseguibile:
 
-	chmod +x /etc/network/if-pre-up.d/load_iptables_rules.sh
+	chmod +x /etc/network/if-pre-up.d/load_iptables_rules
